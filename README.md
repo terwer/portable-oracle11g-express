@@ -19,5 +19,5 @@ Or as root: `docker exec -u 0 -it portable-oracle11g-express /bin/bash`
 
 ```bash
 docker exec -it portable-oracle11g-express /bin/sh
-sqlplus sys/123456 as sysdba
+sqlplus sys/123456@//localhost:1521/XE as sysdba
 ```
