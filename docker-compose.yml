@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  database:
+    container_name: portable-oracle11g-express
+    image: oracle/database:11.2.0.2-xe
+    environment:
+      - "ORACLE_PWD=123456"
+    shm_size: '2gb'
+    volumes:
+      - ./oradata:/opt/oracle/oradata # persistent oracle database data.
+    ports:
+      - 1521:1521
+      - 8080:8080
+      - 5500:5500
